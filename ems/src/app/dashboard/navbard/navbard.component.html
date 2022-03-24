@@ -1,0 +1,22 @@
+   <div class="header p-1" style="color: white;">
+    <div class=" row">
+         <div class="col">
+             <button routerLink="/dashboard" class="text-header-link btn"><h2>Dashboard</h2></button>
+             <button (click)="Profile()"class="text-header-link btn">Profile</button>|
+             <button (click)="Noticeboard()"class="text-header-link btn">Noticeboard</button>|
+             <button (click)="Attendence()"class="text-header-link btn">Attendence</button>|
+             <button (click)="Timesheet()"class="text-header-link btn">Timesheet</button>|
+             <button (click)="Support()"class="text-header-link btn">Support</button>|
+             <button (click)="Contact()"class="text-header-link btn">Contact</button>
+         </div>
+         <div class="col" style="text-align:end;padding:1rem;">
+           <span class="text-header-link" style="color:black">{{clock | date:'hh-mm-ss-a'}}</span>
+             <button mat-button [matMenuTriggerFor]="menu" style="background:none;border:none;color: rgb(10, 10, 10)"><mat-icon>account_circle</mat-icon>USER</button>
+                <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="Profile()">Profile</button>
+                <button mat-menu-item (click)="Profile()">Update Profile</button>
+                <button mat-menu-item (click)="logout()">LOG OUT</button>
+                </mat-menu>
+         </div>
+     </div>
+ </div>

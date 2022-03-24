@@ -1,1 +1,126 @@
-<p>reset works!</p>
+
+    <div class="bg-image">
+        <div class="row">
+          <div
+            class="d-flex justify-content-center"
+            style="padding-top: 220px; padding-right: 5rem"
+          >
+            <mat-card class="logincard">
+              <mat-card-content>
+                <form [formGroup]="forgotPasswordForm">
+                  <p class="nametag">SET_PASSWORD   </p>
+                  <label class="mt-2 label"
+                    >PASSWORD  
+                    <span style="color: red; font-size: 1.2rem">*</span></label
+                  >
+                  <div
+                    title=  'FORGOT PASSWORD '
+                    class="input-group"
+                  >
+                    <input
+                      class="form-control px-2 inputbox"
+                      formControlName="password"
+                      type="password"
+                      placeholder=' 
+                       ENTER NEW PASSWORD' 
+                      style="padding: 0.9rem"
+                      required
+                    />
+                  </div>
+                  <label class="mt-4 label"
+                    >CONFIRM PASSWORD 
+                    <span style="color: red; font-size: 1.2rem">*</span></label
+                  >
+                  <div
+                    class="input-group text-muted"
+                    title='FORGOTPASSWORD' 
+                  >
+                    <input
+                      class="form-control px-2 inputbox"
+                      formControlName="conformPassword"
+                      type="password"
+                      placeholder= 'CONFIRM NEW PASSWORD' 
+                      style="padding: 0.9rem"
+                      required
+                    />
+                  </div>
+     
+                  <div class="passwordrule">
+                    <p style="font-weight: 600">Create a password that:</p>
+                    <li>Contains at least 8 characters</li>
+                    <li>Contains both lower(a-z) and upper case letters(A-Z)</li>
+                    <li>Contains at least one number (0-9) or a symbol</li>
+                  </div>
+               
+                  <button
+                    class="btn"
+                    [disabled]="
+                      validateFormField('password') ||
+                      !(
+                        forgotPasswordForm.value.password ===
+                        forgotPasswordForm.value.conformPassword
+                      )
+                    "
+                    (click)="changePassword()"
+                  >
+                     SIGN IN 
+                  </button>
+                </form>
+                <div class="text-center d-flex justify-content-between mt-4">
+                  <label
+                    style="font-size: 1rem; text-decoration: none"
+                    class="text-muted"
+                    >New user?
+                    <a
+                      routerLink="/auth/signup"
+                      style="
+                        font-family: Open Sans;
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 16px;
+                        align-items: center;
+                        text-decoration-line: underline;
+                        color: #005aa4;
+                      "
+                      > SIGN_UP</a
+                    ></label
+                  >
+                </div>
+              </mat-card-content>
+              <mat-card-footer class="matfooter text-muted">
+                By Continuning, you agree to our
+                <p>
+                  <a
+                    href="https://fego.ai/legal/terms-of-service"
+                    class="text-decoration-none"
+                    style="
+                      text-align: center;
+                      font-size: 0.9rem;
+                      font-family: Open Sans;
+                      font-style: normal;
+                      font-weight: normal;
+                      font-size: 12px;
+                    "
+                    >Terms of service</a
+                  >
+                  and
+                  <a
+                    href="https://fego.ai/legal/privacy"
+                    class="font-italic text-decoration-none"
+                    style="
+                      text-align: center;
+                      font-size: 0.9rem;
+                      font-family: Open Sans;
+                      font-style: normal;
+                      font-weight: normal;
+                      font-size: 12px;
+                    "
+                    >Privacy Policy</a
+                  >
+                </p>
+              </mat-card-footer>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+      

@@ -1,0 +1,12 @@
+.header{
+    background-color: #f7a5a5;
+    color:whitesmoke
+}
+.text-header-link {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.anchortags{
+    text-decoration: none;
+}

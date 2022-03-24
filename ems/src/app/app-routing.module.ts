@@ -16,28 +16,28 @@ import { SupportComponent } from './dashboard/support/support.component';
 import { TimesheetComponent } from './dashboard/timesheet/timesheet.component';
 
 const routes: Routes = [
-  {path:'',component:AuthComponent},
+  {path:'',redirectTo: '/dashboard', pathMatch: 'full'},
   {path:'auth',component:AuthComponent,
-children:[
-{path:'',component:LoginComponent},
-{path:'login',component:LoginComponent},
-{path:'signup',component:SignupComponent},
-{path:'reset',component:ResetComponent},
-{path:'forgot',component:ForgotComponent},]},
-{path:'dashboard',component:DashboardComponent,
-children:[
-  {path:'',component:HomeComponent},
-{path:'home',component:HomeComponent},
-{path:'attendence',component:AttendenceComponent},
-{path:'contact',component:ContactComponent},
-{path:'nopage',component:NopageComponent},
-{path:'noticeboard',component:NoticeboardComponent},
-{path:'profile',component:ProfileComponent},
-{path:'support',component:SupportComponent},
-{path:'timesheet',component:TimesheetComponent},
-{path:'support',component:SupportComponent},
-]},
-{path:'**',component:NopageComponent}
+    children:[
+      {path:'',component:LoginComponent},
+      {path:'login',component:LoginComponent},
+      {path:'signup',component:SignupComponent},
+      {path:'reset',component:ResetComponent},
+      {path:'forgot',component:ForgotComponent},]},
+      {path:'dashboard',component:DashboardComponent,
+        children:[
+          {path:'',component:HomeComponent},
+          {path:'home',component:HomeComponent},
+          {path:'attendence',component:AttendenceComponent},
+          {path:'contact',component:ContactComponent},
+          {path:'nopage',component:NopageComponent},
+          {path:'noticeboard',component:NoticeboardComponent},
+          {path:'profile',component:ProfileComponent},
+          {path:'support',component:SupportComponent},
+          {path:'timesheet',component:TimesheetComponent},
+          {path:'support',component:SupportComponent},
+          ]},
+  {path:'**',component:NopageComponent} //widcard routing
 ];
 
 @NgModule({

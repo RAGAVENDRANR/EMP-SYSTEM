@@ -1,0 +1,72 @@
+.bg-image {
+    height: 100vh;
+    /* background-image: url(''); */
+    background-size: cover;
+    background-position-y: -300px;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+  }
+  
+  .logincard {
+    width: 60%;
+    position: absolute;
+    box-shadow: 0 4px 8px 0 rgba(31, 31, 31, 0.2),
+      0 6px 20px 0 rgba(31, 30, 30, 0.19);
+  }
+  .logo {
+    position: absolute;
+    left: 200px;
+    top: 10px;
+  }
+  .er {
+    color: red;
+    break-inside: auto;
+  }
+  .form-control {
+    width: 100%;
+    font-size: 1rem;
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+    padding: 0.45rem;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #005aa4;
+  }
+  .matcontents2 {
+    position: static;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+    flex: row;
+    order: 2;
+    flex: grow 1;
+  }
+  .invalid-feedback {
+    width: 400px;
+  }
+  .namelabel {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+  }
+  .inputbox {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    padding: 0.5rem;
+  }
+  .requiredstar {
+    color: red;
+    font-size: 1.2rem;
+  }
+ 
+  

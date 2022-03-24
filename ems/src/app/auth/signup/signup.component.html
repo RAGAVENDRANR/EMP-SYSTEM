@@ -1,1 +1,286 @@
-<p>signup works!</p>
+<div class="bg-image">
+    <div class="row">
+      <div class="col-5">
+        <div
+          class="d-flex justify-content-end mt-5 pt-4"
+          style="height: 90vh; width: 75vh; border-radius: 6px"
+        >
+          <mat-card
+            style="
+              box-shadow: 0 4px 8px 0 rgba(31, 31, 31, 0.2),
+                0 6px 20px 0 rgba(31, 30, 30, 0.19);
+            "
+            class="p-4"
+          >
+            <mat-card-content>
+              <h1>SIGN_UP_GREETING</h1>
+              <div>
+                <form
+                  [formGroup]="signUpForm"
+                  autocomplete="off"
+                >
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-6">
+                        <label for="firstname" class="namelabel"
+                          >FIRST NAME
+                          <span class="requiredstar">*</span></label
+                        >
+                        <input
+                          id="firstname"
+                          type="text"
+                          placeholder="FIRST NAME"
+                          required=""
+                          autofocus=""
+                          class="
+                            form-control
+                            border-form-input
+                            px-2
+                            text-muted
+                            mb-1
+                            inputbox
+                          "
+                          formControlName="firstname"
+                          [ngClass]="{ 'is-invalid': isInvalid('firstname') }"
+                        />
+                        <div
+                          *ngIf="isInvalid('firstname')"
+                          class="invalid-feedback"
+                        >
+                          <div>ENTER NAME</div>
+                        </div>
+                      </div>
+  
+                      <div class="col-6 mb-3">
+                        <label for="lastname" class="namelabel"
+                          >LAST NAME
+                          <span class="requiredstar">*</span></label
+                        >
+                        <input
+                          id="lastname"
+                          type="text"
+                          placeholder="LAST NAME PLACEHOLDER"
+                          required=""
+                          autofocus=""
+                          class="
+                            form-control
+                            border-form-input
+                            px-2
+                            text-muted
+                            mb-1
+                            inputbox
+                          "
+                          formControlName="lastname"
+                          [ngClass]="{ 'is-invalid': isInvalid('lastname') }"
+                        />
+                        <div
+                          *ngIf="isInvalid('lastname')"
+                          class="invalid-feedback"
+                        >
+                          <div>ENTER YOUR NAME</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="form-group mb-3">
+                    <label for="email" class="namelabel"
+                      >WORK EMAIL
+                      <span class="requiredstar">*</span></label
+                    >
+                    <input
+                      id="email"
+                      type="email"
+                      placeholder="EMAIL PLACEHOLDER"
+                      required=""
+                      autofocus=""
+                      class="
+                        form-control
+                        border-form-input
+                        px-2
+                        text-muted
+                        mb-1
+                        inputbox
+                      "
+                      formControlName="email"
+                      [ngClass]="{ 'is-invalid': isInvalid('email') }"
+                    />
+                    <div *ngIf="isInvalid('email')" class="invalid-feedback">
+                      <div>ENTER VALID EMAIL</div>
+                    </div>
+                  </div>
+  
+                  <div class="form-group mb-3">
+                    <label for="companyName" class="namelabel"
+                      >COMPANY NAME
+                      <span class="requiredstar">*</span></label
+                    >
+                    <input
+                      id="companyName"
+                      type="text"
+                      placeholder="COMPANY NAME PLACEHOLDER"
+                      required=""
+                      class="
+                        form-control
+                        border-form-input
+                        px-2
+                        text-muted
+                        mb-1
+                        inputbox
+                      "
+                      formControlName="company"
+                      [ngClass]="{ 'is-invalid': isInvalid('company') }"
+                    />
+                    <div *ngIf="isInvalid('company')" class="invalid-feedback">
+                      <div>ENTER COMPANY NAME</div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="number" class="namelabel"
+                      >MOBILE NUMBER
+                      <span class="requiredstar">*</span></label
+                    >
+                    <input
+                      id="number"
+                      type="text"
+                      placeholder="
+                        MOBILE NUMBER"
+                      required=""
+                      autofocus=""
+                      class="
+                        form-control
+                        border-form-input
+                        px-2
+                        text-muted
+                        mb-1
+                        inputbox
+                      "
+                      formControlName="mobile"
+                      [ngClass]="{ 'is-invalid': isInvalid('mobile') }"
+                    />
+                    <div *ngIf="isInvalid('mobile')" class="invalid-feedback">
+                      <div>
+                        ENTER_VALID_PHONE_NUMBER
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="password" class="namelabel"
+                      >PASSWORD
+                      <span class="requiredstar">*</span></label
+                    >
+                    <input
+                      id="password"
+                      type="password"
+                      placeholder="NEW PASSWORD "
+                      required=""
+                      class="
+                        form-control
+                        border-form-input
+                        px-2
+                        text-muted
+                        inputbox
+                      "
+                      formControlName="password"
+                      [ngClass]="{ 'is-invalid': isInvalid('password') }"
+                    />
+                    <div *ngIf="isInvalid('password')" class="invalid-feedback">
+                      <div>INVALID PASSWORD</div>
+                    </div>
+                  </div>
+                  <div class="form-group mb-3">
+                    <label for="confirmPassword" class="namelabel"
+                      >CONFIRM PASSWORD
+                      <span class="requiredstar">*</span>
+                      </label
+                    >
+                    <input
+                      id="confirmPassword"
+                      type="password"
+                      placeholder="Confirm Password"
+                      required=""
+                      class="
+                        form-control
+                        border-form-input
+                        px-2
+                        text-muted
+                        mb-1
+                        inputbox
+                      "
+                      formControlName="confirmPassword"
+                      [ngClass]="{
+                        'is-invalid':
+                          isInvalid('confirmPassword') 
+                      }"
+                    />
+                    <div
+                      *ngIf="isInvalid('confirmPassword')"
+                      class="invalid-feedback"
+                    >
+                      <div>
+                        INVALID CONFIRM PASSWORD
+                      </div>
+                    </div>
+                  </div>
+                  <div class="captcha">
+                    <ngx-recaptcha2
+                      #captchaElem
+                      [siteKey]="'6LcfxNweAAAAANJasUNQ6gOS0nW09IbPbK7PMvNx'"
+                      formControlName="recaptcha"
+                    >
+                    </ngx-recaptcha2>
+                  </div>
+                  <br />
+                  <div class="custom-control custom-checkbox mb-3">
+                    <input
+                      id="customCheck1"
+                      type="checkbox"
+                      class="custom-control-input mx-1 text-muted"
+                      formControlName="termsandconditions"
+                    />
+                    <label
+                      for="customCheck1"
+                      style="
+                        font-family: Open Sans;
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 16px;
+                      "
+                    >
+                    ACCEPT
+                    TERMS AND CONDITIONS
+                    </label>
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn"
+                    [disabled]="!signUpForm.valid"
+                  >
+                SIGN UP
+                  </button>
+      
+                  <div class="text-center d-flex justify-content-between">
+                    <p>
+                      EXISTING USER ?
+                      <a
+                        routerLink="/auth/login"
+                        class="font-italic"
+                        style="
+                          font-size: 1.2rem;
+                          font-weight: 600;
+                          font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
+                            'Trebuchet MS', sans-serif;
+                        "
+                      >SIGN IN</a
+                      >
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+    </div>
+  </div>
+  
