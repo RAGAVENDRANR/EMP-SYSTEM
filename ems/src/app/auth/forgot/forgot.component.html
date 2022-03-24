@@ -1,1 +1,113 @@
-<p>forgot works!</p>
+
+<div class="bg-image">    
+    <div class="row">
+      <div
+        class="d-flex justify-content-center"
+        style="padding-top: 220px; padding-right: 5rem"
+      >
+        <mat-card class="logincard">
+          <mat-card-content>
+            <h3 class="nametag">RESET_PASSWORD</h3>
+            <form [formGroup]="forgotPasswordForm" autocomplete="off">
+              <div *ngIf="!isTokenPresent">
+                <p class="hinttag">
+                   EMAIL USED TO SIGN UP 
+                </p>
+                <br />
+                <br />
+                <div class="form-group mb-4">
+                  <label
+                    class="mb-2"
+                    for="inputemail"
+                    style="color: black; font-size: 1rem"
+                    >Email<span style="color: red; font-size: 1.2rem"
+                      >*</span
+                    ></label
+                  >
+                  <input
+                    id="inputemail"
+                    type="email"
+                    formControlName="email"
+                    placeholder= 'Enter your email here' 
+                    required
+                    class="form-control px-2 inputbox"
+                  />
+                  <p class="notifytag">
+                    Password Link will be sent to this email ID
+                  </p>
+                </div>
+              
+                <div>
+                  <button
+                    type="submit"
+                    class="
+                      btn btn-primary btn-block
+                      text-uppercase
+                      mb-2
+                      text-muted
+                    "
+                    [disabled]="
+                      validateFormField('email')  
+                    "
+                    (click)="sendResetLink()"
+                    class="btn"
+                    style="background-color: #015091"
+                  >
+                     SIGN IN </button
+                  ><br />
+                  <br />
+                  <label
+                    ><a
+                      routerLink="/auth/login"
+                      class="font-italic"
+                      style="
+                        font-size: 1.2rem;
+                        font-weight: 600;
+                        font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
+                          'Trebuchet MS', sans-serif;
+                      "
+                      >LOGIN INSTEAD</a
+                    ></label
+                  >
+                </div>
+              </div>
+            </form>
+          </mat-card-content>
+          <br />
+          <mat-card-footer class="text-muted matfooter">
+            By Continuning, you agree to our
+            <p>
+              <a
+                href=""
+                class="text-decoration-none"
+                style="
+                  text-align: center;
+                  font-size: 0.9rem;
+                  font-family: Open Sans;
+                  font-style: normal;
+                  font-weight: normal;
+                  font-size: 12px;
+                "
+                >Terms of service</a
+              >
+              and
+              <a
+                href=""
+                class="text-decoration-none"
+                style="
+                  text-align: center;
+                  font-size: 0.9rem;
+                  font-family: Open Sans;
+                  font-style: normal;
+                  font-weight: normal;
+                  font-size: 12px;
+                "
+                >Privacy Policy</a
+              >
+            </p>
+          </mat-card-footer>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+  

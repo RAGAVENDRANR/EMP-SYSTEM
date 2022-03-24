@@ -1,0 +1,97 @@
+.bg-image {
+    height: 100vh;
+   background-color: cornsilk;
+    background-size: cover;
+    background-position-y: -300px;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+  }
+  
+  .logincard {
+    width: 440px;
+    height: 564px;
+    border: 0.1rem solid rgb(224, 222, 222);
+    padding: 2rem;
+    position: absolute;
+    box-shadow: 0 4px 8px 0 rgba(31, 31, 31, 0.2),
+      0 6px 20px 0 rgba(31, 30, 30, 0.19);
+  }
+  .logo {
+    position: absolute;
+    left: 200px;
+    top: 10px;
+  }
+  .er {
+    color: red;
+  }
+  .form-control {
+    width: 100%;
+    font-size: 1rem;
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+    background-color: #005aa4;
+  }
+  .matfooter {
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+  }
+  .welcomeheading {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .nametag {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .label {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+  }
+  .notifytag {
+    font-family: Poppins;
+    position: absolute;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 19px;
+    color: rgba(0, 0, 0, 0.38);
+  }
+  .inputbox {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    color: #434c54;
+    opacity: 0.5;
+  }
+  .matfooter {
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+  }
+  .passwordrule {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  

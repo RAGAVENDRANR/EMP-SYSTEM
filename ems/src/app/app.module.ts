@@ -22,7 +22,11 @@ import {MatIconModule} from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
 import { ApiService } from './service files/api.service';
-
+import { NavbardComponent } from './dashboard/navbard/navbard.component';
+import {MatCardModule} from '@angular/material/card';
+import { NgxCaptchaModule } from 'ngx-captcha';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatMenuModule} from '@angular/material/menu';
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +43,7 @@ import { ApiService } from './service files/api.service';
     NoticeboardComponent,
     ContactComponent,
     ProfileComponent,
+    NavbardComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,7 +53,12 @@ import { ApiService } from './service files/api.service';
     ReactiveFormsModule,
     HttpClientModule,
     MatIconModule,
-    MatTableModule
+    MatTableModule,
+    MatCardModule,
+    NgxCaptchaModule,
+    MatTabsModule,
+    MatMenuModule
+
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]
