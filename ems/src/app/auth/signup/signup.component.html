@@ -1,9 +1,9 @@
-<div class="bg-image">
-    <div class="row">
-      <div class="col-5">
+<div class="bg-image ">
+    <div class="row ">
+      <div class="">
         <div
-          class="d-flex justify-content-end mt-5 pt-4"
-          style="height: 90vh; width: 75vh; border-radius: 6px"
+          class="d-flex justify-content-md-center "
+          style="height: 75vh; width: 70vh; border-radius: 6px;justify-content: center;"
         >
           <mat-card
             style="
@@ -13,7 +13,7 @@
             class="p-4"
           >
             <mat-card-content>
-              <h1>SIGN_UP_GREETING</h1>
+              <h1>Provide your detatiles to signup</h1>
               <div>
                 <form
                   [formGroup]="signUpForm"
@@ -59,7 +59,7 @@
                         <input
                           id="lastname"
                           type="text"
-                          placeholder="LAST NAME PLACEHOLDER"
+                          placeholder="LAST NAME"
                           required=""
                           autofocus=""
                           class="
@@ -143,9 +143,7 @@
                     <input
                       id="number"
                       type="text"
-                      placeholder="
-                        MOBILE NUMBER"
-                      required=""
+                      placeholder="MOBILE NUMBER"
                       autofocus=""
                       class="
                         form-control
@@ -222,15 +220,6 @@
                       </div>
                     </div>
                   </div>
-                  <div class="captcha">
-                    <ngx-recaptcha2
-                      #captchaElem
-                      [siteKey]="'6LcfxNweAAAAANJasUNQ6gOS0nW09IbPbK7PMvNx'"
-                      formControlName="recaptcha"
-                    >
-                    </ngx-recaptcha2>
-                  </div>
-                  <br />
                   <div class="custom-control custom-checkbox mb-3">
                     <input
                       id="customCheck1"

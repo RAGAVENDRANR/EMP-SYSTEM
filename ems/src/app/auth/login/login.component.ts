@@ -10,13 +10,10 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   signInForm: FormGroup = new FormGroup({});
   submitted = false;
-  siteKey: string = '';
-  token = '';
 
   constructor(public router:Router,public fb:FormBuilder) {
     this.signInForm = this.fb.group({
       email: [null, [Validators.required]],
-      recaptcha: ['', Validators.required],
       password: [
         null,
         [

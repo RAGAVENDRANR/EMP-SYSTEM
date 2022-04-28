@@ -19,7 +19,6 @@ export class SignupComponent implements OnInit {
       company: ['', Validators.required],
       mobile: ['', Validators.required],
       termsandconditions: [true, Validators.requiredTrue],
-      recaptcha: ['', Validators.required],
       password: [
         '',
         [

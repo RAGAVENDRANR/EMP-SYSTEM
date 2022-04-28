@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiurl:"https://emp-system-df35c-default-rtdb.asia-southeast1.firebasedatabase.app"
+  localjsonurl:"https://localhost:3000",
+  cdatabaseurl:"https://emp-system-df35c-default-rtdb.asia-southeast1.firebasedatabase.app"
 };
 
 /*

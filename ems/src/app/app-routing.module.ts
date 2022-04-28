@@ -16,15 +16,18 @@ import { SupportComponent } from './dashboard/support/support.component';
 import { TimesheetComponent } from './dashboard/timesheet/timesheet.component';
 
 const routes: Routes = [
-  {path:'',redirectTo: '/dashboard', pathMatch: 'full'},
+  
+  {path:'',redirectTo: 'auth', pathMatch: 'full'},
+  //widcard routing
   {path:'auth',component:AuthComponent,
     children:[
       {path:'',component:LoginComponent},
       {path:'login',component:LoginComponent},
       {path:'signup',component:SignupComponent},
       {path:'reset',component:ResetComponent},
-      {path:'forgot',component:ForgotComponent},]},
-      {path:'dashboard',component:DashboardComponent,
+      {path:'forgot',component:ForgotComponent},
+    ]},
+{path:'dashboard',component:DashboardComponent,
         children:[
           {path:'',component:HomeComponent},
           {path:'home',component:HomeComponent},
@@ -37,7 +40,7 @@ const routes: Routes = [
           {path:'timesheet',component:TimesheetComponent},
           {path:'support',component:SupportComponent},
           ]},
-  {path:'**',component:NopageComponent} //widcard routing
+  {path:'**',component:NopageComponent} 
 ];
 
 @NgModule({
