@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  localjsonurl:"https://localhost:3000",
+  localjsonurl:"https://localhost:3000/users",
   cdatabaseurl:"https://emp-system-df35c-default-rtdb.asia-southeast1.firebasedatabase.app"
 };
 

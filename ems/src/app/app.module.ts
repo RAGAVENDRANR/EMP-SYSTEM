@@ -18,7 +18,7 @@ import { ProfileComponent } from './dashboard/profile/profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
 import { ApiService } from './service files/api.service';
 import { NavbardComponent } from './dashboard/navbard/navbard.component';
@@ -26,6 +26,9 @@ import {MatCardModule} from '@angular/material/card';
 import { NgxCaptchaModule } from 'ngx-captcha';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatMenuModule} from '@angular/material/menu';
+import { MyInterceptor } from './service files/interceptor';
+import { DatePipe } from '@angular/common';
+import { MethodService } from './service files/method.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,7 +62,7 @@ import {MatMenuModule} from '@angular/material/menu';
     MatMenuModule
 
   ],
-  providers: [ApiService],
+  providers: [ApiService, { provide: HTTP_INTERCEPTORS, useClass: MyInterceptor, multi: true },DatePipe,MethodService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

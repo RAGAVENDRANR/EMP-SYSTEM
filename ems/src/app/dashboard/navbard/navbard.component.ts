@@ -8,12 +8,14 @@ import { Router } from '@angular/router';
 })
 export class NavbardComponent implements OnInit {
   clock=""
-  clockHandle;
+  clockHandle:any;
 
-  constructor(private router:Router) { 
+  constructor(private router:Router) {
+
     this.clockHandle = setInterval(()=>{
       this.clock = new Date().toLocaleString();
     },1000);
+
   }
 
   ngOnInit(): void {

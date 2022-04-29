@@ -1,1 +1,20 @@
 <p>attendence works!</p>
+<div class="col">
+    <span *ngIf="btn1"> <button class="btn btn-success" (click)="checkin()" >Check in</button></span>
+    <span *ngIf="btn2"><button class="btn btn-danger" (click)="checkout()">Check out</button></span>   
+</div>
+<div class="row">
+<div class="col">
+    <h3>Check In time : {{model1}}</h3>
+</div>
+
+<div class="col">
+    <h3>Check out time : {{model2}}</h3>
+</div>
+<div class="col" >
+    <h3 *ngFor="let ele of diff">Total work time:{{ele.hour}} Hours : {{ele.minute}} Minutes : {{ele.second}} Seconds</h3>
+</div>
+<div class="col">
+    <button (click)="cleardata()" class="btn btn-danger">Clear</button>
+</div>
+</div>
