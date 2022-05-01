@@ -15,25 +15,22 @@ clockHandle2: any;
 
 clock1:any
 clock2:any
-  model1: any;
-  model2: any;
-  btn1=true
-  btn2=true
-  constructor(public datepipe: DatePipe,public m:MethodService) { 
-     
-    
-  }
+model1: any;
+model2: any;
+btn1=true
+btn2=true
+constructor(public datepipe: DatePipe,public m:MethodService) { }
 
-  ngOnInit(): void {
-  }
+ngOnInit(): void {}
 
-  checkin(){
+checkin(){
     this.clock1 = new Date()
     this.model1=this.datepipe.transform(this.clock1,"hh : mm : ss")
     console.log("Checked in success",this.model1)
     alert("Checked in success " )
     this.btn1=false
   }
+
   checkout(){
     this.clock2 = new Date()
     this.model2=this.datepipe.transform(this.clock2,"hh : mm : ss")
@@ -42,7 +39,9 @@ clock2:any
     this.workhr()
     this.btn2=false
   }
+
   diff:any
+  
   workhr(){
    this.diff = this.m.getDataDiff(this.clock1,this.clock2),console.log("Hello" , this.diff)
   }

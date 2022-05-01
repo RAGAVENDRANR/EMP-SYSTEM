@@ -13,7 +13,7 @@ export class ApiService {
   constructor(private http:HttpClient) { }
 
   getall(){
-    return this.http.get(baseurl)
+    return this.http.get(baseurl),console.log("Hi"),this.http.get(cloudurl),console.log("Cloudurl")
   }
   getById(id: any) {
     return this.http.get(`${baseurl}/${id}`)
@@ -27,4 +27,5 @@ update(id: any, params: any) {
 delete(id: any) {
     return this.http.delete(`${baseurl}/${id}`)
 }
+
 }

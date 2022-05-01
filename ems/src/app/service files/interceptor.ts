@@ -25,26 +25,25 @@ export class MyInterceptor implements HttpInterceptor {
             default:
                 // pass through any requests not handled above
                 return alert("No source")
-        } 
-         
+        }   
     } 
     function getUsers() {
-        throw new Error('Function not implemented.');
+        alert("Hi")
     }
     function getUserById() {
-        throw new Error('Function not implemented.');
+        alert("get id")
     }
     
     function createUser() {
-        throw new Error('Function not implemented.');
+        alert("createuser ")
     }
     
     function updateUser() {
-        throw new Error('Function not implemented.');
+        alert("update user")
     }
     
     function deleteUser() {
-        throw new Error('Function not implemented.');
+        alert("Delete user")
     } 
 }
 }
